@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200221 21:53:33.785" generator="Robot 3.1.2 (Python 2.7.17 on win32)">
+<suite source="C:\Users\Unknow\PycharmProjects\Mayadata\Tests\Smoke_general.robot" id="s1" name="Smoke general">
+<test id="s1-t1" name="Customer sign up">
+<kw name="GIVEN I am Guest user i want to enter to the home page" library="Sign_up">
+<kw name="Begin web test on local display" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200221 21:53:34.076" level="INFO">Opening browser 'CHROME' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20200221 21:53:36.181" starttime="20200221 21:53:34.076"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>${WIDTH}</arg>
+<arg>${HEIGHT}</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:37.300" starttime="20200221 21:53:36.181"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.3 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:37.301" starttime="20200221 21:53:37.300"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>20 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:37.603" starttime="20200221 21:53:37.301"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:37.905" starttime="20200221 21:53:37.603"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:53:37.905" starttime="20200221 21:53:34.075"></status>
+</kw>
+<kw name="I want to go on home page" library="Home_page">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20200221 21:53:37.906" level="INFO">Opening url 'https://account.mayadata.io/'</msg>
+<status status="PASS" endtime="20200221 21:53:40.081" starttime="20200221 21:53:37.905"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Sign in to MayaData</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:40.396" starttime="20200221 21:53:40.081"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Welcome on HP of the Maydata.io</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:40.397" starttime="20200221 21:53:40.396"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:53:40.397" starttime="20200221 21:53:37.905"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:53:40.397" starttime="20200221 21:53:34.075"></status>
+</kw>
+<kw name="AND I am Guest user that proceeds to Customer sign up form" library="Sign_up">
+<kw name="I want to proceed to Customer sign up form" library="Home_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[text()='Sign Up']</arg>
+</arguments>
+<msg timestamp="20200221 21:53:40.398" level="INFO">Clicking element 'xpath=.//*[text()='Sign Up']'.</msg>
+<status status="PASS" endtime="20200221 21:53:41.138" starttime="20200221 21:53:40.398"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Do more with your Kubernetes at one place.</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:41.451" starttime="20200221 21:53:41.138"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Sign up form reached</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:41.452" starttime="20200221 21:53:41.451"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:53:41.452" starttime="20200221 21:53:40.398"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:53:41.452" starttime="20200221 21:53:40.397"></status>
+</kw>
+<kw name="AND As Guest user i reached sign up form" library="Sign_up">
+<kw name="I want to fill the first form of the sign up" library="Customer">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember17']</arg>
+<arg>${First_name}</arg>
+</arguments>
+<msg timestamp="20200221 21:53:41.454" level="INFO">Typing text 'Jhon' into text field 'xpath=.//*[@id='ember17']'.</msg>
+<status status="PASS" endtime="20200221 21:53:42.490" starttime="20200221 21:53:41.454"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: First name added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:42.492" starttime="20200221 21:53:42.490"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember18']</arg>
+<arg>${Last_name}</arg>
+</arguments>
+<msg timestamp="20200221 21:53:42.492" level="INFO">Typing text 'Miller' into text field 'xpath=.//*[@id='ember18']'.</msg>
+<status status="PASS" endtime="20200221 21:53:43.517" starttime="20200221 21:53:42.492"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Second name added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:43.518" starttime="20200221 21:53:43.517"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=%Y%m%d%H%M%S</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200221 21:53:43.519" level="INFO">${date} = 20200221215343</msg>
+<status status="PASS" endtime="20200221 21:53:43.519" starttime="20200221 21:53:43.518"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${User_email}</arg>
+<arg>Flashol520+${date}@gmail.com</arg>
+</arguments>
+<msg timestamp="20200221 21:53:43.521" level="INFO">${User_email} = Flashol520+20200221215343@gmail.com</msg>
+<status status="PASS" endtime="20200221 21:53:43.521" starttime="20200221 21:53:43.519"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember19']</arg>
+<arg>${User_email}</arg>
+</arguments>
+<msg timestamp="20200221 21:53:43.521" level="INFO">Typing text 'Flashol520+20200221215343@gmail.com' into text field 'xpath=.//*[@id='ember19']'.</msg>
+<status status="PASS" endtime="20200221 21:53:44.708" starttime="20200221 21:53:43.521"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Customer Email added: ${User_email}</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:44.710" starttime="20200221 21:53:44.708"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='passify-field']</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200221 21:53:44.710" level="INFO">Typing text 'Passpro123$' into text field 'xpath=.//*[@id='passify-field']'.</msg>
+<status status="PASS" endtime="20200221 21:53:45.801" starttime="20200221 21:53:44.710"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Customer password added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:45.802" starttime="20200221 21:53:45.801"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[text()='Sign Up for Free']</arg>
+</arguments>
+<msg timestamp="20200221 21:53:45.802" level="INFO">Clicking element 'xpath=.//*[text()='Sign Up for Free']'.</msg>
+<status status="PASS" endtime="20200221 21:53:46.495" starttime="20200221 21:53:45.802"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Verify your Email</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:48.578" starttime="20200221 21:53:46.495"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: First form are complited</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:48.579" starttime="20200221 21:53:48.578"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:53:48.579" starttime="20200221 21:53:41.453"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:53:48.579" starttime="20200221 21:53:41.453"></status>
+</kw>
+<kw name="AND I get &quot;VerificationCode&quot; email" library="Sign_up">
+<kw name="EmailVerificationCode" library="Emails">
+<kw name="Open Mailbox" library="ImapLibrary2">
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<arguments>
+<arg>host=imap.gmail.com</arg>
+<arg>user=${IMAP_USER}</arg>
+<arg>password=${IMAP_PASSWORD}</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:53:49.457" starttime="20200221 21:53:48.581"></status>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<arguments>
+<arg>sender=no-reply@mayadata.io</arg>
+<arg>timeout=30</arg>
+</arguments>
+<assign>
+<var>${LATEST}</var>
+</assign>
+<msg timestamp="20200221 21:53:59.689" level="INFO">${LATEST} = 4185</msg>
+<status status="PASS" endtime="20200221 21:53:59.689" starttime="20200221 21:53:49.457"></status>
+</kw>
+<kw name="Get Email Body" library="ImapLibrary2">
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<arguments>
+<arg>${LATEST}</arg>
+</arguments>
+<assign>
+<var>${HTML}</var>
+</assign>
+<msg timestamp="20200221 21:54:00.007" level="INFO">${HTML} = ------=_Part_108_1690122338.1582314820525
+Content-Type: multipart/related; 
+	boundary="----=_Part_109_566213265.1582314820525"
+
+------=_Part_109_566213265.1582314820525
+Content-Type: text/html; c...</msg>
+<status status="PASS" endtime="20200221 21:54:00.007" starttime="20200221 21:53:59.689"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${HTML}</arg>
+<arg>border-radius: 4px;"&gt;</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:00.008" starttime="20200221 21:54:00.007"></status>
+</kw>
+<kw name="Fetch From Right" library="String">
+<doc>Returns contents of the ``string`` after the last occurrence of ``marker``.</doc>
+<arguments>
+<arg>${HTML}</arg>
+<arg>border-radius: 4px;"&gt;</arg>
+</arguments>
+<assign>
+<var>${HTML}</var>
+</assign>
+<msg timestamp="20200221 21:54:00.008" level="INFO">${HTML} = 5526&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div style="margin-top:8px; text-align:center;"&gt;
+                &lt;span&gt;This is your verification code, enter it in the profile sec...</msg>
+<status status="PASS" endtime="20200221 21:54:00.009" starttime="20200221 21:54:00.008"></status>
+</kw>
+<kw name="Fetch From Left" library="String">
+<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
+<arguments>
+<arg>${HTML}</arg>
+<arg>&lt;div style="margin-top:8px; text-align:center;"&gt;</arg>
+</arguments>
+<assign>
+<var>${ver_code}</var>
+</assign>
+<msg timestamp="20200221 21:54:00.009" level="INFO">${ver_code} = 5526&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            </msg>
+<status status="PASS" endtime="20200221 21:54:00.009" starttime="20200221 21:54:00.009"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ver_code}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:00.010" level="INFO">${ver_code} = 5526&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            </msg>
+<status status="PASS" endtime="20200221 21:54:00.010" starttime="20200221 21:54:00.009"></status>
+</kw>
+<kw name="Fetch From Left" library="String">
+<doc>Returns contents of the ``string`` before the first occurrence of ``marker``.</doc>
+<arguments>
+<arg>${ver_code}</arg>
+<arg>&lt;/span&gt;</arg>
+</arguments>
+<assign>
+<var>${ver_code}</var>
+</assign>
+<msg timestamp="20200221 21:54:00.010" level="INFO">${ver_code} = 5526</msg>
+<status status="PASS" endtime="20200221 21:54:00.010" starttime="20200221 21:54:00.010"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Verification code is: ${ver_code}</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:00.012" starttime="20200221 21:54:00.010"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:00.012" starttime="20200221 21:53:48.581"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:00.012" starttime="20200221 21:53:48.580"></status>
+</kw>
+<kw name="AND As Guest i want to proceeds with sign up" library="Sign_up">
+<kw name="I want to enter verification code" library="Home_page">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember30']</arg>
+<arg>${ver_code}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:00.014" level="INFO">Typing text '5526&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            ' into text field 'xpath=.//*[@id='ember30']'.</msg>
+<status status="PASS" endtime="20200221 21:54:01.244" starttime="20200221 21:54:00.013"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[text()='Verify']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:01.245" level="INFO">Clicking element 'xpath=.//*[text()='Verify']'.</msg>
+<status status="PASS" endtime="20200221 21:54:03.131" starttime="20200221 21:54:01.244"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Verification code successfully added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:03.133" starttime="20200221 21:54:03.131"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:03.133" starttime="20200221 21:54:00.013"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:03.134" starttime="20200221 21:54:00.013"></status>
+</kw>
+<kw name="AND As Guest i want to add aditional information" library="Sign_up">
+<kw name="I want to enter other information about company" library="Customer">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember37']</arg>
+<arg>${Phone_number}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:03.137" level="INFO">Typing text '+380631141307' into text field 'xpath=.//*[@id='ember37']'.</msg>
+<status status="PASS" endtime="20200221 21:54:04.463" starttime="20200221 21:54:03.137"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Phone number added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:04.465" starttime="20200221 21:54:04.463"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember38']</arg>
+<arg>${Comapny}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:04.466" level="INFO">Typing text 'RobotCompany' into text field 'xpath=.//*[@id='ember38']'.</msg>
+<status status="PASS" endtime="20200221 21:54:05.551" starttime="20200221 21:54:04.465"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Company name added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:05.553" starttime="20200221 21:54:05.551"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember39']</arg>
+<arg>${Role}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:05.554" level="INFO">Typing text 'QAEngineer' into text field 'xpath=.//*[@id='ember39']'.</msg>
+<status status="PASS" endtime="20200221 21:54:06.665" starttime="20200221 21:54:05.553"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Role added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:06.666" starttime="20200221 21:54:06.665"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[text()='Submit']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:06.666" level="INFO">Clicking element 'xpath=.//*[text()='Submit']'.</msg>
+<status status="PASS" endtime="20200221 21:54:07.377" starttime="20200221 21:54:06.666"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:07.377" starttime="20200221 21:54:03.136"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:07.377" starttime="20200221 21:54:03.135"></status>
+</kw>
+<kw name="THEN As registred user i want to logout" library="Sign_up">
+<kw name="I want to log out" library="Home_page">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30 sec</arg>
+<arg>3 sec</arg>
+<arg>set focus to element</arg>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:09.925" starttime="20200221 21:54:07.380"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:09.925" starttime="20200221 21:54:07.380"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:09.925" level="INFO">Clicking element 'xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']'.</msg>
+<status status="PASS" endtime="20200221 21:54:10.595" starttime="20200221 21:54:09.925"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=a[href='/logout']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:10.595" level="INFO">Clicking element 'css=a[href='/logout']'.</msg>
+<status status="PASS" endtime="20200221 21:54:11.852" starttime="20200221 21:54:10.595"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Sign in to MayaData</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:12.369" starttime="20200221 21:54:11.852"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: User successfully logout</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:12.370" starttime="20200221 21:54:12.369"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:12.371" starttime="20200221 21:54:07.379"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:12.371" starttime="20200221 21:54:07.378"></status>
+</kw>
+<kw name="THEN End web test" library="Common">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20200221 21:54:14.702" starttime="20200221 21:54:12.372"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:14.703" starttime="20200221 21:54:12.371"></status>
+</kw>
+<doc>As a Guest user, I should able to sign up as a Customer through home page
+-Home page
+--Sign up steps</doc>
+<tags>
+<tag>Sign up</tag>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20200221 21:54:14.704" critical="yes" starttime="20200221 21:53:34.074"></status>
+</test>
+<test id="s1-t2" name="As a registred user i want to login and change password">
+<kw name="GIVEN I am Guest user i want to enter to the home page" library="Sign_up">
+<kw name="Begin web test on local display" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:14.713" level="INFO">Opening browser 'CHROME' to base url 'about:blank'.</msg>
+<status status="PASS" endtime="20200221 21:54:17.193" starttime="20200221 21:54:14.713"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>${WIDTH}</arg>
+<arg>${HEIGHT}</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:18.615" starttime="20200221 21:54:17.193"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.3 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:18.615" starttime="20200221 21:54:18.615"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>20 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:18.918" starttime="20200221 21:54:18.616"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:19.221" starttime="20200221 21:54:18.918"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:19.221" starttime="20200221 21:54:14.712"></status>
+</kw>
+<kw name="I want to go on home page" library="Home_page">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:19.222" level="INFO">Opening url 'https://account.mayadata.io/'</msg>
+<status status="PASS" endtime="20200221 21:54:21.405" starttime="20200221 21:54:19.222"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Sign in to MayaData</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:21.723" starttime="20200221 21:54:21.405"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Welcome on HP of the Maydata.io</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:21.724" starttime="20200221 21:54:21.723"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:21.724" starttime="20200221 21:54:19.221"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:21.724" starttime="20200221 21:54:14.711"></status>
+</kw>
+<kw name="AND As a registred user i want to login" library="Home_account">
+<kw name="I want to login" library="Customer">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember6']</arg>
+<arg>${User_email}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:21.726" level="INFO">Typing text 'Flashol520+20200221215343@gmail.com' into text field 'xpath=.//*[@id='ember6']'.</msg>
+<status status="PASS" endtime="20200221 21:54:22.948" starttime="20200221 21:54:21.726"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Login added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:22.949" starttime="20200221 21:54:22.948"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember7']</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:22.949" level="INFO">Typing text 'Passpro123$' into text field 'xpath=.//*[@id='ember7']'.</msg>
+<status status="PASS" endtime="20200221 21:54:24.001" starttime="20200221 21:54:22.949"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Password added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:24.002" starttime="20200221 21:54:24.001"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[text()='Sign In']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:24.002" level="INFO">Clicking element 'xpath=.//*[text()='Sign In']'.</msg>
+<status status="PASS" endtime="20200221 21:54:24.671" starttime="20200221 21:54:24.002"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:24.672" starttime="20200221 21:54:21.725"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:24.672" starttime="20200221 21:54:21.725"></status>
+</kw>
+<kw name="AND As a registred user i want to change password" library="Home_account">
+<kw name="I want to change password" library="Customer">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30 sec</arg>
+<arg>3 sec</arg>
+<arg>set focus to element</arg>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:28.310" starttime="20200221 21:54:24.675"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:28.310" starttime="20200221 21:54:24.674"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:28.310" level="INFO">Clicking element 'xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']'.</msg>
+<status status="PASS" endtime="20200221 21:54:28.966" starttime="20200221 21:54:28.310"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember6']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:28.966" level="INFO">Clicking element 'xpath=.//*[@id='ember6']'.</msg>
+<status status="PASS" endtime="20200221 21:54:29.676" starttime="20200221 21:54:28.966"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Jhon Miller</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:29.991" starttime="20200221 21:54:29.676"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Profile page reached</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:29.992" starttime="20200221 21:54:29.991"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=a[href='/change-password']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:29.992" level="INFO">Clicking element 'css=a[href='/change-password']'.</msg>
+<status status="PASS" endtime="20200221 21:54:30.694" starttime="20200221 21:54:29.992"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Change Password</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:31.010" starttime="20200221 21:54:30.694"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Change password form reached</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:31.011" starttime="20200221 21:54:31.010"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='current password']</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:31.012" level="INFO">Typing text 'Passpro123$' into text field 'xpath=.//*[@placeholder='current password']'.</msg>
+<status status="PASS" endtime="20200221 21:54:32.101" starttime="20200221 21:54:31.011"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Old password added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:32.103" starttime="20200221 21:54:32.101"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='new password']</arg>
+<arg>${New_password}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:32.104" level="INFO">Typing text 'Passpro124$' into text field 'xpath=.//*[@placeholder='new password']'.</msg>
+<status status="PASS" endtime="20200221 21:54:33.195" starttime="20200221 21:54:32.103"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@placeholder='confirm password']</arg>
+<arg>${New_password}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:33.196" level="INFO">Typing text 'Passpro124$' into text field 'xpath=.//*[@placeholder='confirm password']'.</msg>
+<status status="PASS" endtime="20200221 21:54:34.257" starttime="20200221 21:54:33.195"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: New password added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:34.262" starttime="20200221 21:54:34.258"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@value='Update password']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:34.262" level="INFO">Clicking element 'xpath=.//*[@value='Update password']'.</msg>
+<status status="PASS" endtime="20200221 21:54:35.009" starttime="20200221 21:54:34.262"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Profile</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:35.324" starttime="20200221 21:54:35.009"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Password successfully changed</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:35.325" starttime="20200221 21:54:35.324"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:35.325" starttime="20200221 21:54:24.673"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:35.325" starttime="20200221 21:54:24.673"></status>
+</kw>
+<kw name="AND As registred user i want to logout" library="Sign_up">
+<kw name="I want to log out" library="Home_page">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>30 sec</arg>
+<arg>3 sec</arg>
+<arg>set focus to element</arg>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:35.943" starttime="20200221 21:54:35.327"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:35.943" starttime="20200221 21:54:35.326"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:35.943" level="INFO">Clicking element 'xpath=.//*[@id='dropdownMenuLink']/p[text()='Jhon Miller']'.</msg>
+<status status="PASS" endtime="20200221 21:54:36.614" starttime="20200221 21:54:35.943"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>css=a[href='/logout']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:36.615" level="INFO">Clicking element 'css=a[href='/logout']'.</msg>
+<status status="PASS" endtime="20200221 21:54:37.763" starttime="20200221 21:54:36.614"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Sign in to MayaData</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:38.260" starttime="20200221 21:54:37.763"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: User successfully logout</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:38.262" starttime="20200221 21:54:38.260"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:38.262" starttime="20200221 21:54:35.326"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:38.262" starttime="20200221 21:54:35.325"></status>
+</kw>
+<kw name="AND As registred user i want to login with new password" library="Home_account">
+<kw name="I want to login with new password" library="Customer">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember6']</arg>
+<arg>${User_email}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:38.264" level="INFO">Typing text 'Flashol520+20200221215343@gmail.com' into text field 'xpath=.//*[@id='ember6']'.</msg>
+<status status="PASS" endtime="20200221 21:54:39.440" starttime="20200221 21:54:38.264"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Login added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:39.441" starttime="20200221 21:54:39.440"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[@id='ember7']</arg>
+<arg>${New_password}</arg>
+</arguments>
+<msg timestamp="20200221 21:54:39.441" level="INFO">Typing text 'Passpro124$' into text field 'xpath=.//*[@id='ember7']'.</msg>
+<status status="PASS" endtime="20200221 21:54:40.511" starttime="20200221 21:54:39.441"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Password added</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:40.513" starttime="20200221 21:54:40.511"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=.//*[text()='Sign In']</arg>
+</arguments>
+<msg timestamp="20200221 21:54:40.513" level="INFO">Clicking element 'xpath=.//*[text()='Sign In']'.</msg>
+<status status="PASS" endtime="20200221 21:54:41.186" starttime="20200221 21:54:40.513"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on the current page.</doc>
+<arguments>
+<arg>Hello Jhon Miller!</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:43.945" starttime="20200221 21:54:41.186"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>INFO: Logged with the new password</arg>
+</arguments>
+<status status="PASS" endtime="20200221 21:54:43.946" starttime="20200221 21:54:43.945"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:43.946" starttime="20200221 21:54:38.263"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:43.946" starttime="20200221 21:54:38.263"></status>
+</kw>
+<kw name="THEN End web test" library="Common">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20200221 21:54:46.279" starttime="20200221 21:54:43.947"></status>
+</kw>
+<status status="PASS" endtime="20200221 21:54:46.279" starttime="20200221 21:54:43.947"></status>
+</kw>
+<doc>As a Guest user, I should able to sign up as a Customer through home page
+-Home page
+--Login
+--- Change password
+---- Login with new password</doc>
+<tags>
+<tag>Login</tag>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20200221 21:54:46.280" critical="yes" starttime="20200221 21:54:14.708"></status>
+</test>
+<status status="PASS" endtime="20200221 21:54:46.282" starttime="20200221 21:53:33.787"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Login</stat>
+<stat fail="0" pass="1">Sign up</stat>
+<stat fail="0" pass="2">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Smoke general" pass="2">Smoke general</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
